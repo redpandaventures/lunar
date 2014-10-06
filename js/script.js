@@ -75,7 +75,7 @@ jQuery(document).ready(function(){
     jQuery( '#postbox .inputs' ).hide();
     jQuery( '#post-prompt' ).click(function () {
         jQuery(this).toggleClass( 'active' );
-        jQuery( '#postbox .inputs' ).slideToggle( 400 );
+        jQuery( '#postbox .inputs' ).slideToggle( "fast" );
         jQuery( '#posttext' ).focus();
         return false;
     });
