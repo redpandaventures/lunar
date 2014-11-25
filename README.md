@@ -9,6 +9,9 @@ Apollo makes use of the following resources:
 
 ## Changelog
 
+### Version 1.4.2 - 2014.11.25
+* Style changes.
+
 ### Version 1.4.1- 2014.10.06
 * LESS -> Sass
 * Various styling changes.
