@@ -8,6 +8,8 @@ Apollo makes use of the following resources:
 
 
 ## Changelog
+### Version 1.4.3 - 2014.11.26
+* Minor style changes.
 
 ### Version 1.4.2 - 2014.11.25
 * Style changes.
