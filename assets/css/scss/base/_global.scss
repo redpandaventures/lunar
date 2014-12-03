@@ -127,7 +127,6 @@ h6,
   color: #191c1c;
   margin: 0 0 .618em;
   font-weight: 300;
-  font-family: "ff-tisa-web-pro",serif;
 }
 h1 a,
 h2 a,
@@ -468,21 +467,7 @@ a:hover {
 .progress.spinner-comment-edit {
   padding: 9px 0 13px;
 }
-#logo-wrapper {
-  width: auto !important;
-  max-width: 85.998em;
-  margin: 0 auto;
-}
-#logo {
-  background: url('../logo.png') no-repeat;
-  margin-bottom:3em;
-  margin-left: 1.9804835607147224%;
-  width:172px;
-  height:33px;
-}
-
 #header {
-  display:none;
   border-bottom: 1px solid #dddddd;
   -webkit-box-shadow: 0 0.327em 0 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0.327em 0 0 rgba(0, 0, 0, 0.05);
@@ -534,7 +519,6 @@ img.avatar, #main #postlist .p2-likes-user img {
   border-radius: 3px;
 }
 #postbox {
-  float:right;
   -webkit-border-radius: 0.327em;
   border-radius: 0.327em;
   margin-bottom: 2.618em;
@@ -553,7 +537,6 @@ img.avatar, #main #postlist .p2-likes-user img {
 
   box-sizing: border-box;
   /* Opera/IE 8+ */
-
 
 }
 #postbox #new_post textarea,
@@ -1016,18 +999,6 @@ h2 .controls a#togglecomments:before {
 #postlist > li.type-page > .postcontent {
   margin-left: 0;
 }
-
-.postcontent,
-.commentcontent {
-
-  h1 {font-size:3em}
-  h2 {font-size:2em}
-  h3 {font-size:1.5em}
-
-  line-height: 1.7;
-
-}
-
 #postlist > li.type-page > h4 {
   display: none;
 }
@@ -1687,7 +1658,7 @@ h2 .controls a#togglecomments:before {
  */
 @media only screen and (min-width: 768px) {
   body {
-    padding-top: 3em;
+    padding-top: 6.854em;
   }
   .fixed {
     position: fixed;
@@ -1986,7 +1957,7 @@ h2 .controls a#togglecomments:before {
   }
   #postbox {
     display: inline;
-    float: right;
+    float: left;
     width: 29.372366211903888%;
     margin-left: 1.9804835607147224%;
     margin-right: 1.9804835607147224%;
@@ -2020,9 +1991,12 @@ h2 .controls a#togglecomments:before {
   #main {
     display: inline;
     float: left;
-    width: 60.72521598452249%;
-    margin-left: 1.9284002273813892%;
-    margin-right: 1.9284002273813892%;
+    width: 46.03903287857055%;
+    margin-left: 1.9804835607147224%;
+    margin-right: 1.9804835607147224%;
+    *width: 45.986949545237216%;
+    *margin-left: 1.9284002273813892%;
+    *margin-right: 1.9284002273813892%;
   }
   #main > h2:first-child {
     border-width: 1px;
@@ -2178,7 +2152,7 @@ h2 .controls a#togglecomments:before {
     *margin-right: 1.9284002273813892%;
   }
   #sidebar {
-    display: none;
+    display: inline;
     float: left;
     width: 21.039032878570556%;
     margin-left: 1.9804835607147224%;
