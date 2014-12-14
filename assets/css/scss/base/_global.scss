@@ -2156,6 +2156,14 @@ h2 .controls a#togglecomments:before {
   border: 0 !important;
   background: none !important;
 }
+span.riddles {
+  color: #000;
+  background: #000;
+}
+span.riddles:hover {
+  background: #fff;
+  color: #333;
+}
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   #postbox {
     width: 100%;
