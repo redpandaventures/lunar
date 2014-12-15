@@ -6,7 +6,10 @@ Apollo makes use of the following resources:
 
 * [FontAwesome Icon font](http://fortawesome.github.io/Font-Awesome/). License: [SIL Open Font License (OFL)](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 
-
+## Changelog
+### Version 1.4.4 - 2014.12.15
+* Minor style changes.
+* 
 ## Changelog
 ### Version 1.4.3 - 2014.11.26
 * Minor style changes.
