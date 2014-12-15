@@ -1027,7 +1027,14 @@ h2 .controls a#togglecomments:before {
   line-height: 1.7;
 
 }
-
+.postcontent ul,
+.commentcontent ul {
+  margin-bottom: 12px !important;
+}
+.postcontent p:empty,
+.commentcontent p:empty {
+   display: none;
+}
 #postlist > li.type-page > h4 {
   display: none;
 }
@@ -1049,7 +1056,8 @@ h2 .controls a#togglecomments:before {
 #postlist .commentcontent {
   margin-left: 48px;
 }
-#postlist .postcontent {
+#postlist .postcontent,
+#postlist .commentcontent {
   padding-bottom: 1.618em;
 
   h4 {
