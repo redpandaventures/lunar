@@ -127,6 +127,7 @@ h6,
   color: #191c1c;
   margin: 0 0 .618em;
   font-weight: 300;
+  font-family: "ff-tisa-web-pro",serif;
 }
 h1 a,
 h2 a,
@@ -456,18 +457,32 @@ a:hover {
 }
 .progress.spinner-post-edit {
   position: absolute;
-  left: -30px;
-  bottom: 1px;
+  left: 70px;
+  bottom: 31px;
 }
 .progress.spinner-comment-new {
   position: absolute;
-  bottom: 20px;
-  left: 87px;
+  bottom: 29px;
+  left: 45px;
 }
 .progress.spinner-comment-edit {
   padding: 9px 0 13px;
 }
+#logo-wrapper {
+  width: auto !important;
+  max-width: 85.998em;
+  margin: 0 auto;
+}
+#logo {
+  background: url('../logo.png') no-repeat;
+  margin-bottom:3em;
+  margin-left: 1.9804835607147224%;
+  width:172px;
+  height:33px;
+}
+
 #header {
+  display:none;
   border-bottom: 1px solid #dddddd;
   -webkit-box-shadow: 0 0.327em 0 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0.327em 0 0 rgba(0, 0, 0, 0.05);
@@ -514,11 +529,12 @@ a:hover {
 #footer {
   padding: 1em 1.618em;
 }
-img.avatar {
+img.avatar, #main #postlist .p2-likes-user img {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 #postbox {
+  float:right;
   -webkit-border-radius: 0.327em;
   border-radius: 0.327em;
   margin-bottom: 2.618em;
@@ -537,6 +553,7 @@ img.avatar {
 
   box-sizing: border-box;
   /* Opera/IE 8+ */
+
 
 }
 #postbox #new_post textarea,
@@ -1010,6 +1027,27 @@ h2 .controls a#togglecomments:before {
 #postlist > li.type-page > .postcontent {
   margin-left: 0;
 }
+
+.postcontent,
+.commentcontent {
+
+  h1 {font-size:3em}
+  h2 {font-size:2em}
+  h3 {font-size:1.5em}
+
+  line-height: 1.7;
+
+  overflow: auto;
+
+}
+.postcontent ul,
+.commentcontent ul {
+  margin-bottom: 12px !important;
+}
+.postcontent p:empty,
+.commentcontent p:empty {
+   display: none;
+}
 #postlist > li.type-page > h4 {
   display: none;
 }
@@ -1031,8 +1069,16 @@ h2 .controls a#togglecomments:before {
 #postlist .commentcontent {
   margin-left: 48px;
 }
-#postlist .postcontent {
+#postlist .postcontent,
+#postlist .commentcontent {
   padding-bottom: 1.618em;
+
+  h4 {
+    margin-left: 0;
+  }
+  ul { 
+    padding: 10px 5px 10px 5px;
+  }
 }
 #postlist .postcontent p:last-child {
   margin-bottom: 0;
@@ -1612,15 +1658,18 @@ h2 .controls a#togglecomments:before {
   padding-left: 1.618em !important;
 }
 #main #postlist .hentry.state-unresolved {
-  box-shadow: #E6000A 5px 0 0 inset;
-  border-left-color: #E6000A !important;
-}
-#main #postlist .hentry.state-resolved {
   box-shadow: $red 5px 0 0 inset;
   border-left-color: $red !important;
 }
-#main #postlist .hentry.state-resolved .actions a.p2-resolve-link {
+#main #postlist .hentry.state-unresolved .actions a.p2-resolve-link {
   background-color: $red !important;
+}
+#main #postlist .hentry.state-resolved {
+  box-shadow: $green 5px 0 0 inset;
+  border-left-color: $green !important;
+}
+#main #postlist .hentry.state-resolved .actions a.p2-resolve-link {
+  background-color: $green !important;
 }
 .p2-resolved-posts-audit-log img {
   width: 16px !important;
@@ -1659,7 +1708,7 @@ h2 .controls a#togglecomments:before {
  */
 @media only screen and (min-width: 768px) {
   body {
-    padding-top: 6.854em;
+    padding-top: 3em;
   }
   .fixed {
     position: fixed;
@@ -1958,7 +2007,7 @@ h2 .controls a#togglecomments:before {
   }
   #postbox {
     display: inline;
-    float: left;
+    float: right;
     width: 29.372366211903888%;
     margin-left: 1.9804835607147224%;
     margin-right: 1.9804835607147224%;
@@ -1992,12 +2041,9 @@ h2 .controls a#togglecomments:before {
   #main {
     display: inline;
     float: left;
-    width: 46.03903287857055%;
-    margin-left: 1.9804835607147224%;
-    margin-right: 1.9804835607147224%;
-    *width: 45.986949545237216%;
-    *margin-left: 1.9284002273813892%;
-    *margin-right: 1.9284002273813892%;
+    width: 60.72521598452249%;
+    margin-left: 1.9284002273813892%;
+    margin-right: 1.9284002273813892%;
   }
   #main > h2:first-child {
     border-width: 1px;
@@ -2131,6 +2177,14 @@ h2 .controls a#togglecomments:before {
   border: 0 !important;
   background: none !important;
 }
+span.riddles {
+  color: #000;
+  background: #000;
+}
+span.riddles:hover {
+  background: #fff;
+  color: #333;
+}
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   #postbox {
     width: 100%;
@@ -2153,7 +2207,7 @@ h2 .controls a#togglecomments:before {
     *margin-right: 1.9284002273813892%;
   }
   #sidebar {
-    display: inline;
+    display: none;
     float: left;
     width: 21.039032878570556%;
     margin-left: 1.9804835607147224%;
