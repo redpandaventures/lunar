@@ -1,8 +1,12 @@
 /**
  * Helpers
  */
-.assistive-text {
-  display: none !important;
+/* Text meant only for screen readers */
+.assistive-text,
+.screen-reader-text {
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
 }
 .clear {
   clear: both;
@@ -1703,6 +1707,12 @@ h2 .controls a#togglecomments:before {
   padding-bottom: 0;
   border: 0;
 }
+#media-attachment-filters.attachment-filters,
+#media-attachment-date-filters.attachment-filters {
+  max-width: 51%;
+  margin-right: 6px;
+}
+
 /**
  * Layout
  */
