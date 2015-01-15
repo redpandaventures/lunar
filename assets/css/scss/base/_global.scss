@@ -2185,7 +2185,7 @@ span.riddles:hover {
     margin: 0 !important;
     display: block;
   }
-  .sleeve_main {
+  .sleeve_main, .postbox-sidebar-footer {
     display: inline;
     float: left;
     width: 71.03903287857055%;
@@ -2204,5 +2204,17 @@ span.riddles:hover {
     *width: 20.986949545237223%;
     *margin-left: 1.9284002273813892%;
     *margin-right: 1.9284002273813892%;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .postbox-sidebar-footer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .postbox-sidebar {
+    display: none;
   }
 }

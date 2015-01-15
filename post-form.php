@@ -68,6 +68,10 @@
 
 		<div class="clear"></div>
 
+		<div class="search-postbox-sidebar">
+			<?php dynamic_sidebar( 'search-box' ); ?>
+		</div>
+
 		<div class="postbox-sidebar">
 			<?php dynamic_sidebar( 'beneath-post-box' ); ?>
 		</div>
