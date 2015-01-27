@@ -14,11 +14,16 @@
 <?php get_header(); ?>
 
 <div class="sleeve_main">
-	<?php if ( p2_user_can_post() && !is_archive() ) : ?>
-		<?php locate_template( array( 'post-form.php' ), true ); ?>
-	<?php endif; ?>
+
 	<div id="main">
-		<h2>
+
+		<?php if ( p2_user_can_post() && !is_archive() ) : ?>
+		<?php locate_template( array( 'post-form.php' ), true ); ?>
+		<?php endif; ?>
+
+		<div class="clear"></div>
+
+		<h2 class="recent-updates">
 			<?php if ( is_home() or is_front_page() ) : ?>
 
 				<?php _e( 'Recent Updates', 'p2' ); ?> <?php if ( p2_get_page_number() > 1 ) printf( __( 'Page %s', 'p2' ), p2_get_page_number() ); ?>
@@ -57,12 +62,10 @@
 
 	</div> <!-- main -->
 
+	<div class="postbox-sidebar">
+		<?php dynamic_sidebar( 'beneath-post-box' ); ?>
+	</div>
+
 </div> <!-- sleeve -->
-
-<div class="clear"></div>
-
-<div class="postbox-sidebar-footer">
-	<?php dynamic_sidebar( 'beneath-post-box' ); ?>
-</div>
 
 <?php get_footer(); ?>
