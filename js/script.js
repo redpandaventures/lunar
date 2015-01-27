@@ -22,28 +22,6 @@ jQuery(document).ready(function(){
     var pbw         = $( '#postbox' ).width();
     var pos         = $( '#postbox .postboxcontent' ).position();
 
-    $(window).scroll(function() {
-        // Only fix it in position if the window is wider than the layout breakpoint
-        // and if the postbox is not taller than the window
-        if ( jQuery( window ).width() > breakpoint && pbh < ( wh - 124 ) ) {
-
-            var offset  = 0;
-            var sticky  = false;
-            var top     = $(window).scrollTop();
-            var pbw     = $( '#postbox' ).width();
-
-            if ( $( '#wrapper' ).offset().top < top + 120 ) {
-                $( '#postbox .postboxcontent' ).addClass( 'fixed' );
-                sticky = true;
-            } else {
-                $( '#postbox .postboxcontent' ).removeClass( 'fixed' );
-            }
-
-            $( '#postbox .postboxcontent' ).css( 'width', pbw );
-        }
-
-    });
-
     // Make sure the post textarea doesn't grow too tall
     if ( jQuery( window ).width() > breakpoint ) {
         var npbh    = wh - 400;
