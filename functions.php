@@ -30,22 +30,6 @@ function houston_register_sidebar() {
 	);
 }
 
-/**
- * Add a search sidebar beneath the post box.
- */
-add_action( 'widgets_init', 'register_search_sidebar' );
-function register_search_sidebar() {
-	register_sidebar( array(
-		'name'          => __( 'Search Box', 'Apollo' ),
-		'id'            => 'search-box',
-		'description'   => '',
-	    'class'         => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widgettitle">',
-		'after_title'   => '</h2>' )
-	);
-}
 
 /**
  * Tweak p2
