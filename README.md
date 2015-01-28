@@ -8,6 +8,10 @@ Apollo makes use of the following resources:
 
 ## Changelog
 
+### Version 1.4.7 - 2015.01.28
+* Move posts above sidebar in single column flow.
+*
+
 ### Version 1.4.6 - 2014.12.22
 * Minor style changes.
 *

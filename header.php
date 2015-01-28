@@ -52,7 +52,7 @@
 
 <div id="logo-wrapper">
 <div id="logo">
-	&nbsp;
+	<a href="<?php echo home_url( '/' ); ?>">&nbsp;</a>
 </div>
 </div>
 
