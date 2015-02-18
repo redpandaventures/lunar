@@ -776,6 +776,12 @@ img.avatar, #main #postlist .p2-likes-user img {
   left: auto;
   right: 3px;
 }
+section.widget {
+  margin-left: 4px;
+}
+section.widget_search {
+  margin-left: 0;
+}
 h2 .controls {
   font-size: .618em;
   float: right;
