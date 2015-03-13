@@ -110,3 +110,21 @@ function houston_viewport_meta() {
 if ( defined( 'P2LIKES_URL' ) ) {
 	require_once( get_stylesheet_directory() . '/includes/integrations/p2-likes/p2-likes.php' );
 }
+
+
+/**
+ * 	Add the Favicon to the head.
+ *
+ *	Added to theme, admin and login.
+ */
+function hm_apollo_favicon() { 
+
+	?>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/favicon.ico" />
+	<?php 
+
+}
+add_action( 'wp_head', 'hm_apollo_favicon' );
+add_action( 'admin_head', 'hm_apollo_favicon' );
+add_action( 'login_head', 'hm_apollo_favicon' );
+
