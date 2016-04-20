@@ -1057,7 +1057,9 @@ h2.recent-updates {
 #postlist > li.type-page > .postcontent {
   margin-left: 0;
 }
-
+#postlist li label {
+  font-weight: normal;
+}
 .postcontent,
 .commentcontent {
 
