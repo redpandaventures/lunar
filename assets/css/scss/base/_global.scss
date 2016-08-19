@@ -339,6 +339,22 @@ img.wp-smiley {
   float: right;
   margin: 0 0 1.618em 1em;
 }
+
+/* Weekly post stats report */
+ul.hm_weekly_stats_list {
+  padding-bottom: 20px !important;
+}
+li.human_avatars {
+  margin: 0 5px 5px 0;
+}
+ul.hm_weekly_stats_list li {
+  float: left;
+  width: 24px;
+  display: block;
+}
+img.avatar.hm_weekly_stats_img {
+  border-radius: 50%;
+}
 /**
  * Forms
  */
