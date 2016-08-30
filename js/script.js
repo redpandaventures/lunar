@@ -78,4 +78,17 @@ jQuery(window).resize(function(){
     }
 
 });
+    // Offset the anchor tag link on weekly update comments to allow for nav and admin bars.
+    var commentOffset = 0;
+
+    $('.avatar-link').click(function(){
+
+         var commentHref   = $(this).attr('href');
+         var commentOffset = $('li' + commentHref ).offset();
+         var scrollto      = commentOffset.top - 72;
+
+        $('html, body').animate({scrollTop:scrollto}, 0)
+
+        return false;
+    });
 }(jQuery));
