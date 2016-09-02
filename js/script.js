@@ -79,16 +79,24 @@ jQuery(window).resize(function(){
 
 });
     // Offset the anchor tag link on weekly update comments to allow for nav and admin bars.
-    var commentOffset = 0;
+    $( '.avatar-link' ).click(function(){
 
-    $('.avatar-link').click(function(){
+         var commentHref             = 'li' + $( this ).attr( 'href' );
+         var commentOffset           = $( commentHref ).offset();
+         var scrollto                = commentOffset.top - 72;
 
-         var commentHref   = $(this).attr('href');
-         var commentOffset = $('li' + commentHref ).offset();
-         var scrollto      = commentOffset.top - 72;
+         var originalBackgoundColour = $( commentHref ).css( "background-color" );
 
-        $('html, body').animate({scrollTop:scrollto}, 0)
+        $('html, body').animate({
+            scrollTop:scrollto
+            }, 0,
+
+            // Highlight the comment, then fade away the highlight.
+            function(){
+                $( commentHref ).css( { backgroundColor: '#F6F3D1' } ).animate( { backgroundColor: originalBackgoundColour }, 2000 );
+            }
+        );
 
         return false;
     });
-}(jQuery));
+}( jQuery ) );
