@@ -144,3 +144,38 @@ add_action( 'wp_head', 'hm_apollo_favicon' );
 add_action( 'admin_head', 'hm_apollo_favicon' );
 add_action( 'login_head', 'hm_apollo_favicon' );
 
+/**
+ * Add a date to repeat post's title. Date format depends on repeating schedule.
+ * Currently adds a date for weekly and monthly scheduled posts.
+ *
+ * Plugin: hm-post-repeat
+ *
+ * @param array $next_post          The repeat (scheduled/next) post data array.
+ * @param array $repeating_schedule Repeating schedule array info.
+ * @param array $original_post      Repeating (original) post data array.
+ *
+ * @return array The repeat post with modified post title including a date.
+ */
+function repeat_post_add_date_to_title( $next_post, $repeating_schedule, $original_post ) {
+
+	$format = '';
+	switch ( $repeating_schedule['slug'] ) {
+		case 'weekly':
+			$format = ' \- \W\e\e\k W\, Y';
+			break;
+		case 'monthly':
+			$format = ' \- F Y';
+			break;
+		default:
+			$format = '';
+	}
+
+	// Add date format to next post's title.
+	if ( $format ) {
+		$next_post['post_title'] .= date( $format, strtotime( $next_post['post_date'] ) );
+	}
+
+	return $next_post;
+}
+
+add_filter( 'hm_post_repeat_edit_repeat_post', __NAMESPACE__ . '\\repeat_post_add_date_to_title', 10, 3 );
