@@ -497,14 +497,14 @@ a:hover {
   background: url('../logo.png') no-repeat;
   margin-bottom:3em;
   margin-left: 1.9804835607147224%;
-  width:172px;
-  height:33px;
+  width:300pc;
+  height:78px;
 }
 #logo a {
   text-decoration:none;
   display:block;
-  width:172px;
-  height:33px;
+  width:300px;
+  height:78px;
 }
 
 #header {
@@ -555,7 +555,7 @@ a:hover {
 #footer {
   padding: 1em 1.618em;
 }
-img.avatar, #main #postlist .p2-likes-user img {
+img.avatar, #main #postlist .p3-likes-user img {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -940,9 +940,9 @@ h2.recent-updates {
   background-color: $bg_light;
   border: 1px solid #dddddd;
   border-width: 1px;
-  -webkit-border-top-left-radius: 0.327em;
+  -webkit-border-top-radius: 0.327em;
   -webkit-border-top-right-radius: 0.327em;
-  border-top-left-radius: 0.327em;
+  border-top-radius: 0.327em;
   border-top-right-radius: 0.327em;
   margin: 0;
 }
@@ -1025,9 +1025,9 @@ h2.recent-updates {
 #postlist > li.post:first-child,
 #postlist li.type-page:first-child {
   border-top-width: 0;
-  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-radius: 0;
   -webkit-border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  border-top-radius: 0;
   border-top-right-radius: 0;
 }
 #postlist > li.post:hover .meta .actions,
@@ -1195,10 +1195,10 @@ h2.recent-updates {
 }
 #postlist .post ul.inlinecomments .meta .actions,
 #postlist .type-page ul.inlinecomments .meta .actions,
-#postlist .post ul.inlinecomments .meta .p2-likes-post,
-#postlist .type-page ul.inlinecomments .meta .p2-likes-post,
-#postlist .post ul.inlinecomments .meta a.p2-likes-link,
-#postlist .type-page ul.inlinecomments .meta a.p2-likes-link {
+#postlist .post ul.inlinecomments .meta .p3-likes-post,
+#postlist .type-page ul.inlinecomments .meta .p3-likes-post,
+#postlist .post ul.inlinecomments .meta a.p3-likes-link,
+#postlist .type-page ul.inlinecomments .meta a.p3-likes-link {
   color: #fafafa;
 }
 #postlist .post ul.inlinecomments li,
@@ -1354,7 +1354,7 @@ h2.recent-updates {
 #postlist .meta .actions .thepermalink,
 #postlist .meta .actions .comment-reply-link,
 #postlist .meta .actions .edit-post-link,
-#postlist .meta .actions .p2-likes-like,
+#postlist .meta .actions .p3-likes-like,
 #postlist .meta .actions .comment-edit-link {
   display: block;
   text-indent: -9999px;
@@ -1369,7 +1369,7 @@ h2.recent-updates {
 #postlist .meta .actions .thepermalink:before,
 #postlist .meta .actions .comment-reply-link:before,
 #postlist .meta .actions .edit-post-link:before,
-#postlist .meta .actions .p2-likes-like:before,
+#postlist .meta .actions .p3-likes-like:before,
 #postlist .meta .actions .comment-edit-link:before {
   font-family: 'FontAwesome';
   speak: none;
@@ -1395,7 +1395,7 @@ h2.recent-updates {
 #postlist .meta .actions .thepermalink:hover:before,
 #postlist .meta .actions .comment-reply-link:hover:before,
 #postlist .meta .actions .edit-post-link:hover:before,
-#postlist .meta .actions .p2-likes-like:hover:before,
+#postlist .meta .actions .p3-likes-like:hover:before,
 #postlist .meta .actions .comment-edit-link:hover:before {
   color: $color_body;
 }
@@ -1409,13 +1409,13 @@ h2.recent-updates {
 #postlist .meta .actions .comment-edit-link:before {
   content: "\f040";
 }
-#postlist .meta .actions .p2-likes-like:before {
+#postlist .meta .actions .p3-likes-like:before {
   content: "\f087";
 }
-#postlist .meta .p2-likes-link {
+#postlist .meta .p3-likes-link {
   display: inline-block;
 }
-#postlist .meta .p2-likes-count {
+#postlist .meta .p3-likes-count {
   font-size: .857em;
   color: $bg_light;
   background: #d2d9d9;
@@ -1431,7 +1431,7 @@ h2.recent-updates {
   position: relative;
   top: -1px;
 }
-#postlist .meta .p2-likes-count:after {
+#postlist .meta .p3-likes-count:after {
   content: "";
   display: block;
   border: 0.5em solid #d2d9d9;
@@ -1440,24 +1440,24 @@ h2.recent-updates {
   top: .25em;
   left: -0.75em;
 }
-#postlist .meta .p2-likes-post,
-#postlist .meta a.p2-likes-link {
+#postlist .meta .p3-likes-post,
+#postlist .meta a.p3-likes-link {
   color: $bg_light;
   position: relative;
 }
-#postlist .meta .p2-likes-post:hover .p2-likes-like:before,
-#postlist .meta a.p2-likes-link:hover .p2-likes-like:before {
+#postlist .meta .p3-likes-post:hover .p3-likes-like:before,
+#postlist .meta a.p3-likes-link:hover .p3-likes-like:before {
   color: $color_body;
 }
-#postlist .meta .p2-likes-post:hover .p2-likes-count,
-#postlist .meta a.p2-likes-link:hover .p2-likes-count {
+#postlist .meta .p3-likes-post:hover .p3-likes-count,
+#postlist .meta a.p3-likes-link:hover .p3-likes-count {
   background-color: $color_body;
 }
-#postlist .meta .p2-likes-post:hover .p2-likes-count:after,
-#postlist .meta a.p2-likes-link:hover .p2-likes-count:after {
+#postlist .meta .p3-likes-post:hover .p3-likes-count:after,
+#postlist .meta a.p3-likes-link:hover .p3-likes-count:after {
   border-color: transparent $color_body transparent transparent;
 }
-#postlist .meta .p2-likes-user {
+#postlist .meta .p3-likes-user {
   background-color: transparent;
 }
 .navigation {
@@ -1528,8 +1528,8 @@ h2.recent-updates {
   border: 1px solid #ababab;
   font-size: 2em;
   font-weight: 300;
-  @include border-top-right-radius(2px);
-  @include border-bottom-right-radius(2px);
+  @include border-top-radius(2px);
+  @include border-bottom-radius(2px);
 }
 .searchform #searchsubmit {
   width: 30%;
@@ -1544,8 +1544,8 @@ h2.recent-updates {
   box-sizing: border-box;
   /* Opera/IE 8+ */
 
-  @include border-top-left-radius(2px);
-  @include border-bottom-left-radius(2px);
+  @include border-top-radius(2px);
+  @include border-bottom-radius(2px);
 
   padding-top: 1.1em;
   padding-bottom: 1.1em;
@@ -1631,9 +1631,9 @@ h2.recent-updates {
 }
 .single #postlist > li.post:first-child {
   border-top-width: 1px;
-  -webkit-border-top-left-radius: 0.327em;
+  -webkit-border-top-radius: 0.327em;
   -webkit-border-top-right-radius: 0.327em;
-  border-top-left-radius: 0.327em;
+  border-top-radius: 0.327em;
   border-top-right-radius: 0.327em;
 }
 .error404 #main p,
@@ -1709,33 +1709,33 @@ h2.recent-updates {
   box-shadow: $red 5px 0 0 inset;
   border-left-color: $red !important;
 }
-#main #postlist .hentry.state-unresolved .actions a.p2-resolve-link {
+#main #postlist .hentry.state-unresolved .actions a.p3-resolve-link {
   background-color: $red !important;
 }
 #main #postlist .hentry.state-resolved {
   box-shadow: $green 5px 0 0 inset;
   border-left-color: $green !important;
 }
-#main #postlist .hentry.state-resolved .actions a.p2-resolve-link {
+#main #postlist .hentry.state-resolved .actions a.p3-resolve-link {
   background-color: $green !important;
 }
-.p2-resolved-posts-audit-log img {
+.p3-resolved-posts-audit-log img {
   width: 16px !important;
 }
-.p2-recent-mentions td.avatar {
+.p3-recent-mentions td.avatar {
   padding-right: 1em;
   width: 16px !important;
   height: 16px !important;
   vertical-align: top;
 }
-.p2-recent-mentions td.avatar img {
+.p3-recent-mentions td.avatar img {
   width: 16px;
   height: auto;
 }
-.p2-recent-mentions td {
+.p3-recent-mentions td {
   padding-bottom: 1.618em;
 }
-.p2-recent-mentions tr:last-child td {
+.p3-recent-mentions tr:last-child td {
   padding-bottom: 0;
 }
 .wpwhosonline-list .wpwhosonline-row {
@@ -2101,9 +2101,9 @@ h2.recent-updates {
   }
   #main > h2:first-child {
     border-width: 1px;
-    -webkit-border-top-left-radius: 0.327em;
+    -webkit-border-top-radius: 0.327em;
     -webkit-border-top-right-radius: 0.327em;
-    border-top-left-radius: 0.327em;
+    border-top-radius: 0.327em;
     border-top-right-radius: 0.327em;
     margin: 0;
   }
@@ -2186,9 +2186,9 @@ h2.recent-updates {
   clear: both;
 }
 .ui-menu .ui-menu-item:first-child {
-  -webkit-border-top-left-radius: 0.327em;
+  -webkit-border-top-radius: 0.327em;
   -webkit-border-top-right-radius: 0.327em;
-  border-top-left-radius: 0.327em;
+  border-top-radius: 0.327em;
   border-top-right-radius: 0.327em;
 }
 .ui-menu .ui-menu-item:last-child {
