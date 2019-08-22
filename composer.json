@@ -1,0 +1,20 @@
+{
+  "name": "redpandaventures/lunar",
+  "description": "",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "homepage": "https://www.redpandaventures.com/",
+  "license": "GPLv2",
+  "authors": [
+    {
+      "name": "Red Panda Ventures",
+      "homepage": "https://www.redpandaventures.com/"
+    }
+  ],
+  "type": "wordpress-theme",
+  "require": {
+    "php": ">=7.0"
+  }
+}
