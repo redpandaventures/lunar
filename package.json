@@ -77,16 +77,16 @@
   "dependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      
     }
   },
   "lint-staged": {
-    "assets/src/scss/**/*.scss": [
+    "assets/css/scss/**/*.scss": [
       "prettier --write",
       "stylelint",
       "git add"
     ],
-    "assets/src/js/**/*.js": [
+    "assets/js/**/*.js": [
       "prettier-eslint --write --eslint-config-path=.eslintrc.js --config=.prettierrc",
       "eslint",
       "git add"
