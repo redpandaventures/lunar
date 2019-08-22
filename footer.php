@@ -14,7 +14,7 @@
 <div id="footer">
 	<p class="credit">
 		<?php echo prologue_poweredby_link(); ?>
-	    <?php printf( __( 'Theme: %1$s by %2$s.', 'Lunar' ), 'Lunar', '<a href="http://woothemes.com/" rel="designer">WooThemes</a>' ); ?>
+		<?php printf( __( 'Theme: %1$s by %2$s.', 'Lunar' ), 'Lunar', '<a href="https://redpandaventures.com/" rel="designer">Red Panda Ventures</a>' ); ?>
 	</p>
 </div>
 
