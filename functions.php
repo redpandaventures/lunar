@@ -13,22 +13,6 @@ function lunar_get_theme_version() {
 	return $theme->version;
 }
 
-add_action( 'wp_enqueue_scripts', function() {
-
-	wp_enqueue_script( 'hm-global-nav', '//hmn.md/hm-global-nav/script.js', [], '0.1', true );
-
-	/**
-	 * Load global nav script asynchronously.
-	 */
-	add_filter( 'script_loader_tag', function( $tag, $handle ) {
-		if ( 'hm-global-nav' === $handle ) {
-			$tag = str_replace( ' src', ' async="async" src', $tag );
-		}
-		return $tag;
-	}, 10, 2 );
-
-} );
-
 /**
  * Add a new sidebar beneath the post box.
  */
@@ -48,11 +32,11 @@ function houston_register_sidebar() {
 
 
 /**
- * Tweak p2
+ * Tweak p3
  */
 add_action( 'init', 'houston_custom' );
 function houston_custom() {
-	remove_action( 'wp_enqueue_scripts', 'p2_iphone_style', 1000 );
+	remove_action( 'wp_enqueue_scripts', 'p3_iphone_style', 1000 );
 }
 
 
@@ -79,7 +63,7 @@ function lunar_enqueue_scripts() {
 	wp_enqueue_style( 'lunar-styles', get_stylesheet_directory_uri() . "/assets/css/theme.css", array(), $version );
 
 	// Scripts
-	wp_register_script( 'lunar-scripts', get_stylesheet_directory_uri() . "/assets/js/theme.js", array( 'jquery', 'p2' ), $version, true );
+	wp_register_script( 'lunar-scripts', get_stylesheet_directory_uri() . "/assets/js/theme.js", array( 'jquery', 'p3' ), $version, true );
 
 	// Localize Script / Data
 	$ct_scripts_data_array = array();

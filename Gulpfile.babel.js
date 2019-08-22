@@ -40,7 +40,7 @@ const paths = {
 		'!assets/src/images/icons/*'
 	],
 	svg: './assets/src/images/icons/*.svg',
-	scss: './assets/src/scss/**/*.scss',
+	scss: './assets/css/scss/**/*.scss',
 	js: './assets/src/js/**/*.js',
 	css: './assets/css/**/*.css',
 	sprites: './assets/src/images/sprites/*.png',

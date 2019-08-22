@@ -16,5 +16,8 @@
   "type": "wordpress-theme",
   "require": {
     "php": ">=7.0"
+  },
+  "require-dev": {
+    "10up/phpcs-composer": "dev-master"
   }
 }
