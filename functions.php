@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @return string version.
  * @since 0.1.0
  */
-function apollo_get_theme_version() {
+function lunar_get_theme_version() {
 	$theme = wp_get_theme( basename( get_bloginfo( 'stylesheet_directory' ) ) );
 	return $theme->version;
 }
@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', function() {
 add_action( 'widgets_init', 'houston_register_sidebar' );
 function houston_register_sidebar() {
 	register_sidebar( array(
-		'name'          => __( 'Beneath Post Box', 'Apollo' ),
+		'name'          => __( 'Beneath Post Box', 'Lunar' ),
 		'id'            => 'beneath-post-box',
 		'description'   => '',
 	    'class'         => '',
@@ -71,25 +71,25 @@ add_filter( 'wp_nav_menu_items', 'houston_new_nav_menu_items', 10, 2 );
 /**
  * Add Sass stylesheet
  */
-function apollo_enqueue_scripts() {
-	
-	$version = apollo_get_theme_version();
-	
+function lunar_enqueue_scripts() {
+
+	$version = lunar_get_theme_version();
+
 	// Styles
-	wp_enqueue_style( 'apollo-styles', get_stylesheet_directory_uri() . "/assets/css/theme.css", array(), $version );
-	
+	wp_enqueue_style( 'lunar-styles', get_stylesheet_directory_uri() . "/assets/css/theme.css", array(), $version );
+
 	// Scripts
-	wp_register_script( 'apollo-scripts', get_stylesheet_directory_uri() . "/assets/js/theme.js", array( 'jquery', 'p2' ), $version, true );
-	
+	wp_register_script( 'lunar-scripts', get_stylesheet_directory_uri() . "/assets/js/theme.js", array( 'jquery', 'p2' ), $version, true );
+
 	// Localize Script / Data
 	$ct_scripts_data_array = array();
-	$ct_script_data = apply_filters( 'apollo_scripts_data', $ct_scripts_data_array );
-	wp_localize_script( 'apollo-scripts', 'ct_scripts', $ct_script_data );;
-	
-	wp_enqueue_script( 'apollo-scripts' );
+	$ct_script_data = apply_filters( 'lunar_scripts_data', $ct_scripts_data_array );
+	wp_localize_script( 'lunar-scripts', 'ct_scripts', $ct_script_data );;
+
+	wp_enqueue_script( 'lunar-scripts' );
 }
 
-add_action( 'wp_enqueue_scripts', 'apollo_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'lunar_enqueue_scripts' );
 
 /**
  * Add js to the frontend
@@ -116,7 +116,7 @@ function houston_viewport_meta() {
 
 /**
  * Integrations
- * Include logic that integrates Apollo with third party plugins
+ * Include logic that integrates lunar with third party plugins
  */
 
 /**
@@ -133,16 +133,16 @@ if ( defined( 'P2LIKES_URL' ) ) {
  *
  *	Added to theme, admin and login.
  */
-function hm_apollo_favicon() { 
+function rpv_lunar_favicon() {
 
 	?>
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/favicon.ico" />
-	<?php 
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/favicon.png" />
+	<?php
 
 }
-add_action( 'wp_head', 'hm_apollo_favicon' );
-add_action( 'admin_head', 'hm_apollo_favicon' );
-add_action( 'login_head', 'hm_apollo_favicon' );
+add_action( 'wp_head', 	  'rpv_lunar_favicon' );
+add_action( 'admin_head', 'rpv_lunar_favicon' );
+add_action( 'login_head', 'rpv_lunar_favicon' );
 
 /**
  * Add a date to repeat post's title. Date format depends on repeating schedule.
@@ -178,4 +178,4 @@ function repeat_post_add_date_to_title( $next_post, $repeating_schedule, $origin
 	return $next_post;
 }
 
-add_filter( 'hm_post_repeat_edit_repeat_post', __NAMESPACE__ . '\\repeat_post_add_date_to_title', 10, 3 );
+add_filter( 'rpv_post_repeat_edit_repeat_post', __NAMESPACE__ . '\\repeat_post_add_date_to_title', 10, 3 );
